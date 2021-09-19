@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pinyin-helper/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/pinyin-helper/static/js/main.a0d429a8.chunk.js",
+    "main.js.map": "/pinyin-helper/static/js/main.a0d429a8.chunk.js.map",
+    "runtime-main.js": "/pinyin-helper/static/js/runtime-main.155cb0b0.js",
+    "runtime-main.js.map": "/pinyin-helper/static/js/runtime-main.155cb0b0.js.map",
+    "static/js/2.b70a21db.chunk.js": "/pinyin-helper/static/js/2.b70a21db.chunk.js",
+    "static/js/2.b70a21db.chunk.js.map": "/pinyin-helper/static/js/2.b70a21db.chunk.js.map",
+    "static/js/3.02bfb261.chunk.js": "/pinyin-helper/static/js/3.02bfb261.chunk.js",
+    "static/js/3.02bfb261.chunk.js.map": "/pinyin-helper/static/js/3.02bfb261.chunk.js.map",
+    "index.html": "/pinyin-helper/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/pinyin-helper/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.b70a21db.chunk.js.LICENSE.txt": "/pinyin-helper/static/js/2.b70a21db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.155cb0b0.js",
+    "static/js/2.b70a21db.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.a0d429a8.chunk.js"
+  ]
+}
