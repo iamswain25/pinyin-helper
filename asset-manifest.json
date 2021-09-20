@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pinyin-helper/static/css/main.3a98243c.chunk.css",
-    "main.js": "/pinyin-helper/static/js/main.e37601b4.chunk.js",
-    "main.js.map": "/pinyin-helper/static/js/main.e37601b4.chunk.js.map",
+    "main.js": "/pinyin-helper/static/js/main.ed461559.chunk.js",
+    "main.js.map": "/pinyin-helper/static/js/main.ed461559.chunk.js.map",
     "runtime-main.js": "/pinyin-helper/static/js/runtime-main.eb4eadef.js",
     "runtime-main.js.map": "/pinyin-helper/static/js/runtime-main.eb4eadef.js.map",
     "static/js/2.b60b0793.chunk.js": "/pinyin-helper/static/js/2.b60b0793.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.eb4eadef.js",
     "static/js/2.b60b0793.chunk.js",
     "static/css/main.3a98243c.chunk.css",
-    "static/js/main.e37601b4.chunk.js"
+    "static/js/main.ed461559.chunk.js"
   ]
 }
