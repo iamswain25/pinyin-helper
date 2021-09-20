@@ -25,6 +25,7 @@ export default function App() {
     const target = ev.target as HTMLElement;
     if (target.tagName === "SPAN" && target.hasAttribute("title")) {
       const title = target.getAttribute("title") || "";
+      target.classList.add("highlight");
       setAside({
         left: target.offsetLeft,
         top: target.offsetTop - 80,
@@ -33,7 +34,9 @@ export default function App() {
       });
     }
   }
-  function onMouseOutHandler() {
+  function onMouseOutHandler(ev: MouseEvent) {
+    const target = ev.target as HTMLElement;
+    target.classList.remove("highlight");
     setAside({ ...aside, visible: false });
   }
   const withPinyin = React.useMemo(() => {
