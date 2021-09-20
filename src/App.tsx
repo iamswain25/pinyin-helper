@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 import pinyin from "pinyin";
 import GraphemeSplitter from "grapheme-splitter";
 import TextareaAutosize from "react-textarea-autosize";
@@ -12,8 +12,30 @@ const defaultText = `漁父辭
 而蒙世俗之塵埃乎. 漁父莞爾而笑, 鼓枻而去. 乃歌曰, 滄浪之水淸兮,
 可以濯吾纓. 滄浪之水濁兮, 可以濯吾足. 遂去不復與言.`;
 const splitter = new GraphemeSplitter();
+
 export default function App() {
   const [text, setText] = React.useState(defaultText);
+  const [aside, setAside] = React.useState({
+    left: 0,
+    top: 0,
+    visible: false,
+    title: "",
+  });
+  function onMouseOverHandler(ev: MouseEvent) {
+    const target = ev.target as HTMLElement;
+    if (target.tagName === "SPAN" && target.hasAttribute("title")) {
+      const title = target.getAttribute("title") || "";
+      setAside({
+        left: target.offsetLeft,
+        top: target.offsetTop - 80,
+        title,
+        visible: true,
+      });
+    }
+  }
+  function onMouseOutHandler() {
+    setAside({ ...aside, visible: false });
+  }
   const withPinyin = React.useMemo(() => {
     const split: string[] = splitter.splitGraphemes(text);
     return split.map((ch, i) => {
@@ -25,6 +47,7 @@ export default function App() {
       });
     });
   }, [text]);
+  const { left, top, title, visible } = aside;
   return (
     <section style={{ padding: "2rem", fontSize: "1.2rem" }}>
       <TextareaAutosize
@@ -32,7 +55,28 @@ export default function App() {
         onChange={(ev) => setText(ev.target.value)}
         style={{ width: "100%", fontSize: "1.2rem" }}
       />
-      <article style={{ whiteSpace: "pre-line" }}>{withPinyin}</article>
+      <article
+        style={{ whiteSpace: "pre-line" }}
+        onMouseOver={onMouseOverHandler}
+        onMouseOut={onMouseOutHandler}
+      >
+        {withPinyin}
+      </article>
+      <aside
+        style={{
+          left,
+          top,
+          position: "absolute",
+          boxShadow: "0 0 1rem rgba(0,0,0,0.2)",
+          backgroundColor: "white",
+          padding: "0.5rem",
+          fontSize: "3rem",
+          borderRadius: "0.5rem",
+          visibility: visible ? "visible" : "hidden",
+        }}
+      >
+        {title}
+      </aside>
     </section>
   );
 }
