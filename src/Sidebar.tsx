@@ -54,9 +54,13 @@ function Li(props: { text: string }) {
   const { text } = props;
   const title = text.substr(0, text.indexOf("\n"));
   const [selectedText, updateText] = useAtom(textAtom);
+  const [, setVisible] = useAtom(sidebarVisibleAtom);
   return (
     <li
-      onClick={() => updateText(text)}
+      onClick={() => {
+        updateText(text);
+        setVisible(false);
+      }}
       style={{ fontWeight: selectedText === text ? "bold" : "normal" }}
     >
       {title}

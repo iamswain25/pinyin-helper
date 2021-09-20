@@ -48,15 +48,19 @@ export default function App() {
   return (
     <section style={{ padding: "2rem", fontSize: "1.2rem" }}>
       <Sidebar />
-      <h1>copy paste chinese text below</h1>
+      <h1>chinese textarea pasted below will...</h1>
       <TextareaAutosize
         value={text}
         onChange={(ev) => setText(ev.target.value)}
-        style={{ width: "100%", fontSize: "1.2rem", marginBottom: "1rem" }}
+        className="shadow"
+        style={{
+          width: "100%",
+          fontSize: "1.2rem",
+          marginBottom: "1rem",
+          padding: "1rem",
+        }}
       />
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h2>see pinyin 🔠🔢 on mouse hover 🖱⬇⬇⬇⬇⬇</h2>
-      </div>
+      <h2>have pinyin 🔠🔢 on mouse hover 🖱⬇⬇⬇⬇⬇</h2>
       <article
         style={{ whiteSpace: "pre-line", marginTop: "1rem" }}
         onMouseOver={onMouseOverHandler}
