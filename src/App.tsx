@@ -46,15 +46,21 @@ export default function App() {
   }, [text]);
   const { left, top, title, visible } = aside;
   return (
-    <section style={{ padding: "2rem", fontSize: "1.2rem" }}>
+    <section
+      style={{
+        padding: "2rem",
+        fontSize: "1.2rem",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Sidebar />
-      <h1>chinese textarea pasted below will...</h1>
+      <h1>chinese texts pasted below will...</h1>
       <TextareaAutosize
         value={text}
         onChange={(ev) => setText(ev.target.value)}
         className="shadow"
         style={{
-          width: "100%",
           fontSize: "1.2rem",
           marginBottom: "1rem",
           padding: "1rem",
