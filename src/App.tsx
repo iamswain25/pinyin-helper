@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, useCallback } from "react";
 import pinyin from "pinyin";
 import GraphemeSplitter from "grapheme-splitter";
 import TextareaAutosize from "react-textarea-autosize";
@@ -15,24 +15,32 @@ export default function App() {
     visible: false,
     title: "",
   });
-  function onMouseOverHandler(ev: MouseEvent) {
-    const target = ev.target as HTMLElement;
-    if (target.tagName === "SPAN" && target.hasAttribute("title")) {
-      const title = target.getAttribute("title") || "";
-      target.classList.add("highlight");
-      setAside({
-        left: target.offsetLeft,
-        top: target.offsetTop - 80,
-        title,
-        visible: true,
-      });
-    }
-  }
-  function onMouseOutHandler(ev: MouseEvent) {
-    const target = ev.target as HTMLElement;
-    target.classList.remove("highlight");
-    setAside({ ...aside, visible: false });
-  }
+  const onMouseOverHandler = useCallback(
+    (ev: MouseEvent) => {
+      const target = ev.target as HTMLElement;
+      if (target.tagName === "SPAN" && target.hasAttribute("title")) {
+        const title = target.getAttribute("title") || "";
+        target.classList.add("highlight");
+        setAside({
+          left: target.offsetLeft,
+          top: target.offsetTop - 80,
+          title,
+          visible: true,
+        });
+      }
+    },
+    [setAside]
+  );
+
+  const onMouseOutHandler = useCallback(
+    (ev: MouseEvent) => {
+      const target = ev.target as HTMLElement;
+      target.classList.remove("highlight");
+      setAside((aside) => ({ ...aside, visible: false }));
+    },
+    [setAside]
+  );
+
   const withPinyin = React.useMemo(() => {
     const split: string[] = splitter.splitGraphemes(text);
     return split.map((ch, i) => {

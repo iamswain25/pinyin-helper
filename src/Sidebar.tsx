@@ -5,9 +5,17 @@ import * as texts from "./texts";
 
 export default function Sidebar() {
   const [visible, setVisible] = useAtom(sidebarVisibleAtom);
+  console.log({ visible });
   return (
     <div>
-      <button onClick={() => setVisible(true)}>Othere examples</button>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setVisible(true);
+        }}
+      >
+        Other examples
+      </button>
       {visible && <OtherExamples />}
     </div>
   );
@@ -40,7 +48,7 @@ function OtherExamples() {
         padding: "1rem",
       }}
     >
-      <h1>Othere examples</h1>
+      <h1>Other examples</h1>
       <ul className="clickable-li">
         {Object.values(texts).map((text, index) => (
           <Li text={text} key={index} />
