@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/pinyin-helper/static/css/main.3a98243c.chunk.css",
-    "main.js": "/pinyin-helper/static/js/main.82f1e466.chunk.js",
-    "main.js.map": "/pinyin-helper/static/js/main.82f1e466.chunk.js.map",
-    "runtime-main.js": "/pinyin-helper/static/js/runtime-main.eb4eadef.js",
-    "runtime-main.js.map": "/pinyin-helper/static/js/runtime-main.eb4eadef.js.map",
-    "static/js/2.3daf5bf0.chunk.js": "/pinyin-helper/static/js/2.3daf5bf0.chunk.js",
-    "static/js/2.3daf5bf0.chunk.js.map": "/pinyin-helper/static/js/2.3daf5bf0.chunk.js.map",
-    "static/js/3.65d2b6d1.chunk.js": "/pinyin-helper/static/js/3.65d2b6d1.chunk.js",
-    "static/js/3.65d2b6d1.chunk.js.map": "/pinyin-helper/static/js/3.65d2b6d1.chunk.js.map",
+    "main.css": "/pinyin-helper/static/css/main.6d94fe75.css",
+    "main.js": "/pinyin-helper/static/js/main.97b759ba.js",
+    "static/js/787.d4f66e40.chunk.js": "/pinyin-helper/static/js/787.d4f66e40.chunk.js",
     "index.html": "/pinyin-helper/index.html",
-    "static/css/main.3a98243c.chunk.css.map": "/pinyin-helper/static/css/main.3a98243c.chunk.css.map",
-    "static/js/2.3daf5bf0.chunk.js.LICENSE.txt": "/pinyin-helper/static/js/2.3daf5bf0.chunk.js.LICENSE.txt"
+    "main.6d94fe75.css.map": "/pinyin-helper/static/css/main.6d94fe75.css.map",
+    "main.97b759ba.js.map": "/pinyin-helper/static/js/main.97b759ba.js.map",
+    "787.d4f66e40.chunk.js.map": "/pinyin-helper/static/js/787.d4f66e40.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb4eadef.js",
-    "static/js/2.3daf5bf0.chunk.js",
-    "static/css/main.3a98243c.chunk.css",
-    "static/js/main.82f1e466.chunk.js"
+    "static/css/main.6d94fe75.css",
+    "static/js/main.97b759ba.js"
   ]
 }
